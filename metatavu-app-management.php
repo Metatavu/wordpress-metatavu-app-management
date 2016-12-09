@@ -23,27 +23,27 @@ function metatavuAppManagementRenderLocationMetaBox($mobilepage) {
 
   $locations[] = [
     'name' => 'Kansalaisopisto',
-    'value' => '62,23,Kansalaisopisto'
+    'value' => '61.691319,27.268632,Kansalaisopisto'
   ];
 
   $locations[] = [
     'name' => 'Musiikkiopisto',
-    'value' => '61,24,Musiikkiopisto'
+    'value' => '61.686395,27.270510,Musiikkiopisto'
   ];
 
   $locations[] = [
     'name' => 'Suuri Näyttämö',
-    'value' => '60.32,22.212,Suuri Näyttämö'
+    'value' => '61.690584,27.269343,Suuri Näyttämö'
   ];
 
   $locations[] = [
     'name' => 'Pieni Näyttämö',
-    'value' => '60.2151,23.231,Pieni Näyttämö'
+    'value' => '61.690487,27.269512,Pieni Näyttämö'
   ];
 
   $locations[] = [
     'name' => 'Vanha Sotku',
-    'value' => '62.12,23.23,Vanha Sotku'
+    'value' => '61.683072,27.262015,Vanha Sotku'
   ];
 
 	$location = get_post_meta($mobilepage->ID, "metatavu-app-management-location", true);
