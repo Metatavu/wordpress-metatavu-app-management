@@ -23,31 +23,31 @@ function metatavuAppManagementRenderLocationMetaBox($mobilepage) {
 
   $locations[] = [
     'name' => 'Kansalaisopisto',
-    'value' => '62,23'
+    'value' => '62,23,Kansalaisopisto'
   ];
 
   $locations[] = [
     'name' => 'Musiikkiopisto',
-    'value' => '61,24'
+    'value' => '61,24,Musiikkiopisto'
   ];
 
   $locations[] = [
     'name' => 'Suuri Näyttämö',
-    'value' => '60.32,22.212'
+    'value' => '60.32,22.212,Suuri Näyttämö'
   ];
 
   $locations[] = [
     'name' => 'Pieni Näyttämö',
-    'value' => '60.2151,23.231'
+    'value' => '60.2151,23.231,Pieni Näyttämö'
   ];
 
   $locations[] = [
     'name' => 'Vanha Sotku',
-    'value' => '62.12,23.23'
+    'value' => '62.12,23.23,Vanha Sotku'
   ];
 
 	$location = get_post_meta($mobilepage->ID, "metatavu-app-management-location", true);
-  $value = $location['lat'] . ',' . $location['lng'];
+  $value = $location['lat'] . ',' . $location['lng'] . ',' . $location['text'];
 	echo '<select name="metatavu-app-management-location" id="metatavu-app-management-location" style="width: 100%;" >';
   foreach ($locations as $loc) {
     echo '<option'. selected( $loc['value'], $value ) .' value="'. $loc['value'] .'">' . $loc['name'] . '</option>';
@@ -102,6 +102,7 @@ function metatavuAppManagementSaveMobilePage($mobilepageId) {
     $parts = explode(',', $_POST['metatavu-app-management-location']);
     $location['lat'] = $parts[0];
     $location['lng'] = $parts[1];
+    $location['text'] = $parts[2];
 
     update_post_meta($mobilepageId, 'metatavu-app-management-location', $location);
   }
