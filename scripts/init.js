@@ -3,7 +3,7 @@
 
   function initializeFormComponents() {
     flatpickr('.metatavu-app-management-date.uninitialized', {
-      dateFormat: 'j.n.'
+      dateFormat: 'j.n.Y'
     });
     $('.metatavu-app-management-time.uninitialized').timepicker({
       timeFormat: 'G:i'
