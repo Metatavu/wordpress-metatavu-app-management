@@ -3,7 +3,7 @@
  * Created on Nov 7, 2016
  * Plugin Name: Metatavu App Management
  * Description: Metatavu App Management
- * Version: 0.1
+ * Version: 0.2
  * Author: Heikki Kurhinen / Metatavu Oy
  */
 defined ( 'ABSPATH' ) || die ( 'No script kiddies please!' );
