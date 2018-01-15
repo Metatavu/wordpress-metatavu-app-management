@@ -45,10 +45,15 @@ function metatavuAppManagementRenderLocationMetaBox($mobilepage) {
     'name' => 'Vanha Sotku',
     'value' => '61.683072,27.262015,Vanha Sotku'
   ];
+  
+  $locations[] = [
+    'name' => 'Kahvila Nanda',
+    'value' => '61.690046,27.270673,Kahvila Nanda'
+  ];
 
-	$location = get_post_meta($mobilepage->ID, "metatavu-app-management-location", true);
+  $location = get_post_meta($mobilepage->ID, "metatavu-app-management-location", true);
   $value = $location['lat'] . ',' . $location['lng'] . ',' . $location['text'];
-	echo '<select name="metatavu-app-management-location" id="metatavu-app-management-location" style="width: 100%;" >';
+  echo '<select name="metatavu-app-management-location" id="metatavu-app-management-location" style="width: 100%;" >';
   foreach ($locations as $loc) {
     echo '<option'. selected( $loc['value'], $value ) .' value="'. $loc['value'] .'">' . $loc['name'] . '</option>';
   }
