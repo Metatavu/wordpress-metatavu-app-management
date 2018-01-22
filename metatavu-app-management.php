@@ -3,7 +3,7 @@
  * Created on Nov 7, 2016
  * Plugin Name: Metatavu App Management
  * Description: Metatavu App Management
- * Version: 0.2
+ * Version: 0.3
  * Author: Heikki Kurhinen / Metatavu Oy
  */
 defined ( 'ABSPATH' ) || die ( 'No script kiddies please!' );
@@ -49,6 +49,11 @@ function metatavuAppManagementRenderLocationMetaBox($mobilepage) {
   $locations[] = [
     'name' => 'Kahvila Nanda',
     'value' => '61.690046,27.270673,Kahvila Nanda'
+  ];
+  
+  $locations[] = [
+    'name' => 'Kulttuuritalo Tempo',
+    'value' => '61.691795,27.271761,Kulttuuritalo Tempo'
   ];
 
   $location = get_post_meta($mobilepage->ID, "metatavu-app-management-location", true);
